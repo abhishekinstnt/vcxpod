@@ -33,7 +33,12 @@ Pod::Spec.new do |s|
   s.dependency 'SVProgressHUD', '~> 2.2'
   s.static_framework = true
   
-    s.vendored_frameworks =  'InstntMultipassSDK/vcx.xcframework'
+    #s.vendored_frameworks =  'InstntMultipassSDK/vcx.xcframework'
+
+# Point to the URL of the zipped xcframework
+  s.source = { 
+    :http => 'https://github.com/instnt-inc/instnt-aries-vcx/releases/download/aries-framework-vcx-uniffi-ios/vcx.xcframework.zip'
+  }
   
   s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
