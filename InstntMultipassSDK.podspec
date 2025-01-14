@@ -37,7 +37,7 @@ Pod::Spec.new do |s|
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
 s.prepare_command = <<-CMD
-curl - L https://github.com/instnt-inc/instnt-aries-vcx/releases/download/aries-framework-vcx-uniffi-ios/vcx.xcframework.zip -o vcx.xcframework.zip
+curl -L https://github.com/instnt-inc/instnt-aries-vcx/releases/download/aries-framework-vcx-uniffi-ios/vcx.xcframework.zip -o vcx.xcframework.zip
 unzip vcx.xcframework.zip -d InstntMultipassSDK
 CMD
 
